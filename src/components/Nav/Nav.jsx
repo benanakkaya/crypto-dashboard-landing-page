@@ -64,10 +64,10 @@ const Nav = () => {
     ]
 
   return (
-    <nav className='bg-grey-0 flex flex-col gap-[80px] rounded-[12px] p-[20px]'> 
-        <ul className='flex flex-col gap-[20px]'>
+    <nav className='col-span-2 flex flex-col'> 
+        <ul className='bg-grey-0 rounded-[12px]  p-[20px]  flex flex-col gap-[20px]'>
             {navItems.map(item =>
-            <li className='flex items-center gap-[20px] b-shadow cursor-pointer hover:text-white'>
+            <li key={item.id} className='flex items-center gap-[20px] b-shadow cursor-pointer hover:text-white'>
                 {item.icon}
                 {item.name}
             </li>

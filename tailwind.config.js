@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       container: {
         center: true,
+        padding: {
+         default: "0px"
+        }
       },
       colors: {
         "dark-bg": "#0F1216",
@@ -15,8 +18,11 @@ module.exports = {
         "grey-800": "#3B4758",
         "grey-900": "#1D232C",
         "primary": "#0077E4",
+        "primary-600": "#319DFF",
         "success": "#0DA678",
+        "success-100": "#10d096",
         "warning": "#FFAA04",
+        "warning-100": "#ffc045",
         "warning-200": "#FFE6B5",
         "danger": "#FF316A",
       },
