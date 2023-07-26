@@ -1,14 +1,13 @@
 import React from "react";
 import { MdOutlineArrowDropUp } from "react-icons/md";
+import { useSelector } from "react-redux";
 import {
   AreaChart,
   Area,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Legend,
 } from "recharts";
 
 const data = [
@@ -76,9 +75,12 @@ const axisStyle = {
 };
 
 const Graph = () => {
+
+  const {isDarkMode} = useSelector(state => state.theme)
+
   return (
-    <div className="bg-grey-0 p-[20px] rounded-[12px] flex flex-col gap-[20px] border-b-[1px] border-b-[#1d232c]">
-      <div className="bg-grey-900  rounded-[6px] flex items-center justify-between  p-[4px] ">
+    <div className="bg-white dark:bg-grey-0 transition-colors duration-1000 p-[20px] rounded-[12px] flex flex-col gap-[20px]">
+      <div className="bg-white dark:bg-grey-900 transition-colors duration-1000  rounded-[6px] flex items-center justify-between  p-[4px] ">
         <div className="flex gap-[4px]text-[14px]">
         <button className=" bg-primary text-white rounded-[4px] px-[8px] py-[4px]">
           Total
@@ -89,7 +91,7 @@ const Graph = () => {
         </div>
         <div className="flex items-center gap-[10px] text-[14px]">
           <button className="p-[4px]">1H</button>
-          <button className="p-[4px] bg-[#232932] rounded-[6px]">1D</button>
+          <button className="p-[4px] bg-grey-100 text-primary dark:bg-[#232932] rounded-[6px] transition-colors duration-1000">1D</button>
           <button className="p-[4px]">1W</button>
           <button className="p-[4px]">1M</button>
           <button className="p-[4px]">1Y</button>
@@ -101,13 +103,13 @@ const Graph = () => {
                 <small>Total Balance</small>
                 <span className="text-success flex items-center "><MdOutlineArrowDropUp /> 1.01 %</span>
             </div>
-            <strong className="text-white text-[24px]">$ 4,800.00</strong>
+            <strong className="text-dark dark:text-white text-[24px] transition-colors duration-1000">$ 4,800.00</strong>
       </div>
       <ResponsiveContainer height={200}>
         <AreaChart width="100%" data={data}>
           <defs>
             <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stopColor="#0DA678" stopOpacity={0.1} />
+              <stop className="transition-all duration-1000" offset="0" stopColor="#0DA678" stopOpacity={isDarkMode ? 0.1 : 0.5} />
               <stop offset="1" stopColor="#0DA678" stopOpacity={0} />
             </linearGradient>
           </defs>

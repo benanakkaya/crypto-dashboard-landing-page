@@ -62,17 +62,17 @@ const WalletModal = ({ handleCloseModal }) => {
 
 
   return (
-    <div className="z-30 w-[400px] bg-grey-0 rounded-lg">
+    <div className="z-30 w-[400px] h-[500px] bg-white dark:bg-grey-0 rounded-lg">
       <ModalHeader handleCloseModal={handleCloseModal} title="Connect Wallet" />
       <div className="flex flex-col items-center gap-[20px] p-[20px] pt-[0px]">
-        <p className="w-full bg-grey-900 p-[20px] text-white text-[14px] rounded-lg">
+        <p className="w-full bg-grey-200 dark:bg-grey-900 p-[20px] text-dark dark:text-white text-[14px] rounded-lg">
           If you connect with one of the wallets below, make sure you read and
           agree to Vector DeFi Terms of Service. Store your private keys or seed
           phrase securely, and never share them with anyone.
         </p>
         <ul className="grid grid-cols-3 gap-[10px] w-full">
             {wallets.map(wallet => 
-            <li key={wallet.id} className="flex flex-col items-center gap-[5px] py-[12px] hover:bg-[#1d232c] rounded-md cursor-pointer">
+            <li key={wallet.id} className="flex flex-col items-center gap-[5px] py-[12px] hover:bg-grey-200 dark:hover:bg-[#1d232c] rounded-md cursor-pointer transition-color duration-500">
                 <img className="w-[32px] h-[32px]" src={wallet.icon} alt={wallet.name} />
                 <h5 className="text-[12px]">{wallet.name}</h5>
             </li>

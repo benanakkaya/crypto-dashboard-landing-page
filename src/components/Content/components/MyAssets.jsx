@@ -154,8 +154,8 @@ const MyAssets = () => {
     ]
 
   return (
-    <div className="flex flex-col bg-grey-0 rounded-[12px]">
-      <div className="text-[18px] font-bold text-white p-[20px] border-b-[1px] border-b-[#1d232c]">My Assets</div>
+    <div className="flex flex-col bg-white dark:bg-grey-0  transition-colors duration-1000 rounded-[12px]">
+      <div className="text-[18px] font-bold text-dark dark:text-white p-[20px] border-b-[1px] border-b-grey-200 dark:border-b-[#1d232c] transition-colors duration-1000">My Assets</div>
       <table  className="p-[20px]">
         <thead>
         <tr className="text-[12px]">
@@ -168,21 +168,21 @@ const MyAssets = () => {
         </thead>
         <tbody>
             {assets.map(asset => (
-        <tr className="text-[16px] hover:bg-[#1d232c]">
+        <tr key={asset.id} className="text-[16px] hover:bg-grey-200 dark:hover:bg-[#1d232c] transition-colors duration-500">
           <td className="p-[20px] flex items-center gap-[10px]">
             <img className="w-[40px] h-[40px]" src={asset.coin.icon} alt={asset.coin.name} />
             <div className="flex flex-col h-full justify-between">
-                <h5 className="text-white font-bold">{asset.coin.name}</h5>
+                <h5 className="text-dark dark:text-white font-bold transition-colors duration-1000">{asset.coin.name}</h5>
                 <small className="text-[14px]">{asset.coin.shortName}</small>
             </div>
           </td>
           <td className="p-[20px]">
-            <strong className="block text-white font-bold text-end">$ {asset.balance.total},00</strong>
+            <strong className="block text-dark dark:text-white font-bold text-end transition-colors duration-1000">$ {asset.balance.total},00</strong>
             <small className="block text-[14px] text-end">{asset.balance.converted}{" "}{asset.coin.shortName}</small>
           </td>
-          <td className="p-[20px] font-bold text-[16px] text-white text-end">$ {asset.price}</td>
-          <td className={`p-[20px] text-end ${asset.flactuation < 0 ? "text-danger" : asset.flactuation === 0 ? "text-warning" : "text-success" }`}>{asset.flactuation < 0 ? `▼ ${-asset.flactuation}`: asset.flactuation === 0 ? `● ${-asset.flactuation}.00` : `▲ ${asset.flactuation}` }</td>
-          <td className="p-[20px] text-white font-bold text-end">{asset.percentage}%</td>
+          <td className="p-[20px] font-bold text-[16px] text-dark dark:text-white text-end transition-colors duration-1000">$ {asset.price}</td>
+          <td className={`p-[20px] text-end ${asset.flactuation < 0 ? "text-danger" : asset.flactuation === 0 ? "text-warning" : "text-success" }`}>{asset.flactuation < 0 ? `▼ ${-asset.flactuation} %`: asset.flactuation === 0 ? `● ${-asset.flactuation}.00 %` : `▲ ${asset.flactuation} %` }</td>
+          <td className="p-[20px] text-dark dark:text-white font-bold text-end transition-colors duration-1000">{asset.percentage}%</td>
         </tr>
         ))}
         </tbody>

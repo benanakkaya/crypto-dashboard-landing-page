@@ -12,7 +12,7 @@ import store from "./redux/store";
 function App() {
   return (
     <Provider store={store}>
-      <div className="font-roboto min-h-screen bg-dark-bg text-grey-600  py-[20px] flex flex-col gap-[20px]">
+      <div className="font-roboto min-h-screen bg-light-bg dark:bg-dark-bg transition-colors duration-1000 text-grey-600  py-[20px] flex flex-col gap-[20px]">
         <Modal />
         <Header />
         <div className="container grid grid-cols-12 gap-[20px] w-full">

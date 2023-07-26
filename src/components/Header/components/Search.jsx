@@ -102,12 +102,12 @@ const Search = () => {
         placeholder="Search assets"
       />
       {searchListVisibility && (
-        <ul className="absolute left-0 top-[120%] p-[10px] h-[200px] rounded-[6px] border-[1px] border-grey-800 bg-grey-0 w-full overflow-y-auto flex flex-col gap-[10px]">
+        <ul className="absolute left-0 top-[120%] p-[10px] h-[200px] rounded-[6px] border-[1px] border-grey-800 bg-white dark:bg-grey-0 w-full overflow-y-auto flex flex-col gap-[10px]">
           {coinList.map((coin) => (
-            <li key={coin.id} className="flex items-center gap-[10px] p-[10px] hover:bg-[#1d232c] rounded-[6px] ">
+            <li key={coin.id} className="flex items-center gap-[10px] p-[10px] hover:bg-grey-200 dark:hover:bg-[#1d232c] rounded-[6px] ">
               <img className="w-[40px] h-[40px]" src={coin.icon} />
               <div className="flex flex-col gap-[5px]">
-                <strong className="text-grey-100 text-[16px] font-bold ">
+                <strong className="text-dark dark:text-grey-100 text-[16px] font-bold ">
                   {coin.name}
                 </strong>
                 <small className="text-[14px] ">{coin.shortName}</small>
