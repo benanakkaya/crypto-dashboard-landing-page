@@ -12,10 +12,11 @@ const ThemeSelector = () => {
     const dispatch = useDispatch();
 
     const handleClick = () => {
-      dispatch(setDarkMode())
+      dispatch(setDarkMode());
     }
 
     useEffect(() => {
+
       if(isDarkMode){
         document.documentElement.classList.add("dark")
       }
