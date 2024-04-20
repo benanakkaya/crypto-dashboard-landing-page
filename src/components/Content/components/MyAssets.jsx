@@ -160,10 +160,10 @@ const MyAssets = () => {
         <thead>
         <tr className="text-[12px]">
           <th className="text-start p-[20px]" >ASSET</th>
-          <th className="text-end p-[20px]" >BALANCE</th>
+          <th className="hidden md:block text-end p-[20px]" >BALANCE</th>
           <th className="text-end p-[20px]" >PRICE</th>
           <th className="p-[20px] text-end" >FLUCTUATION</th>
-          <th className="p-[20px] text-end" >PERCANTAGE</th>
+          <th className="hidden md:block p-[20px] text-end" >PERCANTAGE</th>
         </tr>
         </thead>
         <tbody>
@@ -176,13 +176,13 @@ const MyAssets = () => {
                 <small className="text-[14px]">{asset.coin.shortName}</small>
             </div>
           </td>
-          <td className="p-[20px]">
+          <td className="hidden md:block p-[20px]">
             <strong className="block text-dark dark:text-white font-bold text-end transition-colors duration-1000">$ {asset.balance.total},00</strong>
             <small className="block text-[14px] text-end">{asset.balance.converted}{" "}{asset.coin.shortName}</small>
           </td>
           <td className="p-[20px] font-bold text-[16px] text-dark dark:text-white text-end transition-colors duration-1000">$ {asset.price}</td>
           <td className={`p-[20px] text-end ${asset.flactuation < 0 ? "text-danger" : asset.flactuation === 0 ? "text-warning" : "text-success" }`}>{asset.flactuation < 0 ? `▼ ${-asset.flactuation} %`: asset.flactuation === 0 ? `● ${-asset.flactuation}.00 %` : `▲ ${asset.flactuation} %` }</td>
-          <td className="p-[20px] text-dark dark:text-white font-bold text-end transition-colors duration-1000">{asset.percentage}%</td>
+          <td className="hidden md:block p-[20px] text-dark dark:text-white font-bold text-end transition-colors duration-1000">{asset.percentage}%</td>
         </tr>
         ))}
         </tbody>

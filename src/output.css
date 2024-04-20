@@ -628,6 +628,14 @@ video {
   grid-column: span 7 / span 7;
 }
 
+.col-span-1{
+  grid-column: span 1 / span 1;
+}
+
+.col-span-12{
+  grid-column: span 12 / span 12;
+}
+
 .block{
   display: block;
 }
@@ -642,6 +650,10 @@ video {
 
 .grid{
   display: grid;
+}
+
+.hidden{
+  display: none;
 }
 
 .h-\[16px\]{
@@ -676,24 +688,16 @@ video {
   height: 40px;
 }
 
+.h-\[500px\]{
+  height: 500px;
+}
+
 .h-\[80px\]{
   height: 80px;
 }
 
 .h-full{
   height: 100%;
-}
-
-.h-\[420px\]{
-  height: 420px;
-}
-
-.h-\[520px\]{
-  height: 520px;
-}
-
-.h-\[500px\]{
-  height: 500px;
 }
 
 .min-h-screen{
@@ -769,6 +773,10 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -813,16 +821,6 @@ video {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
-}
-
-.divide-\[\#1d232c\] > :not([hidden]) ~ :not([hidden]){
-  --tw-divide-opacity: 1;
-  border-color: rgb(29 35 44 / var(--tw-divide-opacity));
-}
-
-.divide-grey-300 > :not([hidden]) ~ :not([hidden]){
-  --tw-divide-opacity: 1;
-  border-color: rgb(204 209 217 / var(--tw-divide-opacity));
 }
 
 .divide-grey-200 > :not([hidden]) ~ :not([hidden]){
@@ -880,11 +878,6 @@ video {
   border-color: rgb(59 71 88 / var(--tw-border-opacity));
 }
 
-.border-b-\[\#1d232c\]{
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(29 35 44 / var(--tw-border-opacity));
-}
-
 .border-b-grey-200{
   --tw-border-opacity: 1;
   border-bottom-color: rgb(221 225 232 / var(--tw-border-opacity));
@@ -900,11 +893,6 @@ video {
   background-color: rgb(7 9 11 / var(--tw-bg-opacity));
 }
 
-.bg-grey-0{
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 27 33 / var(--tw-bg-opacity));
-}
-
 .bg-grey-100{
   --tw-bg-opacity: 1;
   background-color: rgb(238 240 244 / var(--tw-bg-opacity));
@@ -913,11 +901,6 @@ video {
 .bg-grey-200{
   --tw-bg-opacity: 1;
   background-color: rgb(221 225 232 / var(--tw-bg-opacity));
-}
-
-.bg-grey-900{
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 35 44 / var(--tw-bg-opacity));
 }
 
 .bg-light-bg{
@@ -952,11 +935,6 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-grey-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(204 209 217 / var(--tw-bg-opacity));
 }
 
 .p-20{
@@ -1149,11 +1127,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-black{
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
 .opacity-80{
   opacity: 0.8;
 }
@@ -1181,18 +1154,8 @@ video {
   transition-duration: 150ms;
 }
 
-.transition-opacity{
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .duration-1000{
   transition-duration: 1000ms;
-}
-
-.duration-300{
-  transition-duration: 300ms;
 }
 
 .duration-500{
@@ -1253,11 +1216,6 @@ video {
 .hover\:bg-grey-300:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(204 209 217 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-grey-800:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 71 88 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-success-100:hover{
@@ -1348,6 +1306,57 @@ video {
 :is(.dark .dark\:hover\:text-white:hover){
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px){
+  .sm\:flex{
+    display: flex;
+  }
+}
+
+@media (min-width: 768px){
+  .md\:flex{
+    display: flex;
+  }
+
+  .md\:w-auto{
+    width: auto;
+  }
+
+  .md\:flex-1{
+    flex: 1 1 0%;
+  }
+
+  .md\:flex-row{
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+
+  .lg\:col-span-3{
+    grid-column: span 3 / span 3;
+  }
+
+  .lg\:col-span-7{
+    grid-column: span 7 / span 7;
+  }
+
+  .lg\:flex{
+    display: flex;
+  }
+
+  .lg\:grid-cols-12{
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .lg\:px-\[0px\]{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 

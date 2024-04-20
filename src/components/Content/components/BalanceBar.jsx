@@ -2,7 +2,7 @@ import React from 'react'
 
 const BalanceBar = ({balance}) => {
   return (
-    <div className={`flex flex-1 items-center justify-between ${balance.color} cursor-pointer text-white rounded-[12px] py-[10px] px-[20px] transition-color duration-500`}>
+    <div className={`flex w-full md:w-auto md:flex-1 items-center justify-between ${balance.color} cursor-pointer text-white rounded-[12px] py-[10px] px-[20px] transition-color duration-500`}>
         <div className='text-[45px]'>
         {balance.icon}
         </div>

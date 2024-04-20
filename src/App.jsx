@@ -21,13 +21,13 @@ function App() {
 
 
   return (
-      <div className="font-roboto min-h-screen bg-light-bg dark:bg-dark-bg transition-colors duration-1000 text-grey-600  py-[20px] flex flex-col gap-[20px]">
+      <div className="font-roboto min-h-screen bg-light-bg dark:bg-dark-bg transition-colors duration-1000 text-grey-600 px-[10px] lg:px-[0px]  py-[20px] flex flex-col gap-[20px]">
         <Modal />
         <Header />
-        <div className="container grid grid-cols-12 gap-[20px] w-full">
+        <div className="container grid grid-cols-1 lg:grid-cols-12 gap-[20px] w-full">
           <Nav />
           <Content />
-          <div className="col-span-3 flex flex-col gap-[20px]">
+          <div className="col-span-1 lg:col-span-3 flex flex-col gap-[20px]">
             <Swap />
             <RecentTransactions />
           </div>

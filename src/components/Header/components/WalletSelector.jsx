@@ -22,7 +22,7 @@ const WalletSelector = () => {
   }
 
   return (
-    <div className="relative w-[200px] hover:bg-grey-200 dark:hover:bg-[#1d232c] flex items-center rounded-[6px] border-[1px] border-grey-800 px-[10px] py-[8px]">
+    <div className="relative w-[200px] hover:bg-grey-200 dark:hover:bg-[#1d232c] hidden sm:flex items-center rounded-[6px] border-[1px] border-grey-800 px-[10px] py-[8px]">
       <div onClick={handleClick} className="cursor-pointer  flex items-center justify-between w-full">
         <div className="flex items-center  gap-[10px]">
           <img src={MetaMaskIco} alt="metamask" />

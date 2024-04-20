@@ -26,8 +26,8 @@ const Content = () => {
   ];
 
   return (
-    <div className="col-span-7 flex flex-col gap-[20px]">
-      <div className="flex items-center gap-[10px]">
+    <div className="col-span-1 lg:col-span-7 flex flex-col gap-[20px]">
+      <div className="flex flex-col md:flex-row items-center gap-[10px]">
         {balances.map((balance) => (
           <BalanceBar key={balance.id} balance={balance} />
         ))}

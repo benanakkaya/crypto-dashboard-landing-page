@@ -92,7 +92,7 @@ const Search = () => {
   };
 
   return (
-    <label className="relative flex items-center gap-[10px] shadow-sm border-[1px] border-grey-800 focus-within:border-primary p-[10px] rounded-[6px]">
+    <label className="relative hidden lg:flex items-center gap-[10px] shadow-sm border-[1px] border-grey-800 focus-within:border-primary p-[10px] rounded-[6px]">
       <AiOutlineSearch className="" />
       <input
         onFocus={handleFocus}
